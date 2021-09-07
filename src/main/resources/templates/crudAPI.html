@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>CRUD API Page</title>
+</head>
+<body>
+
+
+<div class="container">
+
+    <H1>CRUD API</H1>
+    <br>
+
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">The operations can be tested in Postman. Below are some examples
+            <br> Jackson was used in order to convert POJOs to JSON and viceversa.
+            </li>
+            <li class="list-group-item"><h5> <b>GET</b></h5>
+                Retrieve full customer list as JSON <a th:href="@{/api/customers}"> here</a></li>
+            <li class="list-group-item"><h5> <b>GET</b></h5>
+                Retrieve customer by id.
+                As it runs on local db, the url is http://localhost:8080/CrudApi/api/customers/<b>number</b>.
+                <br>
+                Number is replaced by the customer's id.
+                <br>
+                Example <a th:href="@{/api/customers/1}"> here</a>  </li>
+
+            <li class="list-group-item"><h5> <b>POST</b></h5>
+                Create new user.
+                <br> Example: http://localhost:8080/CrudApi/api/customers
+                <br> Body: <br>{
+
+                        <br>"firstName": "Name",
+                        <br>"lastName": "LastName",
+                        <br> "email": "name@email.com"
+                        <br>      }
+            </li>
+
+            <li class="list-group-item"><h5> <b>PUT</b></h5>
+                Update a user.
+                <br> Example: http://localhost:8080/CrudApi/api/customers
+                <br> Body: <br>{
+
+                <br>"firstName": "UpdatedName",
+                <br>"lastName": "LastName",
+                <br> "email": "name@email.com"
+                <br>      }
+            </li>
+            <li class="list-group-item"><h5> <b>DELETE</b></h5>
+                And finally delete a user. Syntax is similar to searching for a user.
+                <br>
+                Number is replaced by the customer's id.
+                <br>
+                Example <a th:href="@{/api/customers/1}"></a>
+            </li>
+        </ul>
+</div>
+</body>
+</html>

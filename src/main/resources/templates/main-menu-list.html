@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Main Menu </title>
+</head>
+<body>
+<div class="container">
+    <br>
+    <H1>Customer page</H1>
+    <hr>
+    <a th:href="@{/customers/createCustomer}"
+       class="btn btn-primary btn-sm mb-3">
+        Create Customer
+    </a>
+
+    <!-- use bootstrap for table styling -->
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th> First Name</th>
+                <th> Last Name</th>
+                <th> Email</th>
+                <th> Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!--/*@thymesVar id="customers" type="com.acacio.firstSpringBoot"*/-->
+            <tr th:each ="customer : ${customers}">
+
+                <td th:text="${customer.firstName}" />
+                <td th:text="${customer.lastName}" />
+                <td th:text="${customer.email}" />
+
+             <!-- Update and delete buttons -->
+
+                <td>
+                    <a th:href="@{/customers/update(customerId=${customer.id})}"
+                       class="btn btn-info btn-sm">
+                        Update
+                    </a>
+
+                    <a th:href="@{/customers/delete(customerId=${customer.id})}"
+                       class="btn btn-danger btn-sm"onclick="if (!(confirm('Are you sure you want to delete the user?')))return false">
+                        Delete
+                    </a>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <br>
+
+    <h5>You can also perform full CRUD operations through the API<a th:href="@{/api/menu}"> here</a></h5>
+</div>
+</body>
+</html>
