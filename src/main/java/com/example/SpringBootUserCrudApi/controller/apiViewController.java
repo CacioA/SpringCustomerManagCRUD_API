@@ -14,4 +14,10 @@ public class apiViewController {
 
         return "crudAPI.html";
     }
+
+    @GetMapping("/login")
+    public String loginPage(){
+
+        return "logIn.html";
+    }
 }
