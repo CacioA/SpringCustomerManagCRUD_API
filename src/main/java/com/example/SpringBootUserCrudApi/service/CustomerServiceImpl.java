@@ -3,7 +3,7 @@ package com.example.SpringBootUserCrudApi.service;
 
 //import com.example.SpringBootUserCrudApi.dao.CustomerDAO;
 import com.example.SpringBootUserCrudApi.dao.CustomerRepository;
-import com.example.SpringBootUserCrudApi.entity.Customer;
+import com.example.SpringBootUserCrudApi.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

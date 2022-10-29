@@ -1,6 +1,6 @@
 package com.example.SpringBootUserCrudApi.rest;
 
-import com.example.SpringBootUserCrudApi.entity.Customer;
+import com.example.SpringBootUserCrudApi.model.Customer;
 import com.example.SpringBootUserCrudApi.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
