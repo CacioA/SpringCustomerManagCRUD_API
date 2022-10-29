@@ -2,7 +2,7 @@ package com.example.SpringBootUserCrudApi.service;
 
 
 
-import com.example.SpringBootUserCrudApi.entity.Customer;
+import com.example.SpringBootUserCrudApi.model.Customer;
 
 import java.util.List;
 
