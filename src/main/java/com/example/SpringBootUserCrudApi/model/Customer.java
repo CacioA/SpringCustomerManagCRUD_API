@@ -1,4 +1,4 @@
-package com.example.SpringBootUserCrudApi.models;
+package com.example.SpringBootUserCrudApi.model;
 
 
 import javax.persistence.*;
