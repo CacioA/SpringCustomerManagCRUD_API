@@ -1,6 +1,6 @@
 package com.example.SpringBootUserCrudApi.dao;
 
-import com.example.SpringBootUserCrudApi.entity.Customer;
+import com.example.SpringBootUserCrudApi.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.example.SpringBootUserCrudApi;
 
-import com.example.SpringBootUserCrudApi.entity.Customer;
+
 import com.example.SpringBootUserCrudApi.service.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

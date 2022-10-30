@@ -1,9 +1,8 @@
 package com.example.SpringBootUserCrudApi.controller;
 
 
-import com.example.SpringBootUserCrudApi.entity.Customer;
+import com.example.SpringBootUserCrudApi.model.Customer;
 import com.example.SpringBootUserCrudApi.service.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +11,12 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/customers")
-public class mainController {
+public class customerController {
 
 
     private CustomerService customerService;
 
-    public mainController(CustomerService theCustomerService){
+    public customerController(CustomerService theCustomerService){
         customerService=theCustomerService;
     }
 
