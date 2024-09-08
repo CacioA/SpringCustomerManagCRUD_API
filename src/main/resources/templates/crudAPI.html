@@ -24,18 +24,18 @@
             <br> Jackson was used in order to convert POJOs to JSON and viceversa.
             </li>
             <li class="list-group-item"><h5> <b>GET</b></h5>
-                Retrieve full customer list as JSON <a th:href="@{/api/customers}"> here</a></li>
+                Retrieve full customer list as JSON <a th:href="@{/v1/customers}"> here</a></li>
             <li class="list-group-item"><h5> <b>GET</b></h5>
                 Retrieve customer by id.
-                As it runs on local db, the url is http://localhost:8080/CrudApi/api/customers/<b>number</b>.
+                As it runs on local db, the url is http://localhost:8080/CrudApi/v1/customers/<b>number</b>.
                 <br>
                 Number is replaced by the customer's id.
                 <br>
-                Example <a th:href="@{/api/customers/1}"> here</a>  </li>
+                Example <a th:href="@{/v1/customers/1}"> here</a>  </li>
 
             <li class="list-group-item"><h5> <b>POST</b></h5>
                 Create new user.
-                <br> Example: http://localhost:8080/CrudApi/api/customers
+                <br> Example: http://localhost:8080/CrudApi/v1/customers
                 <br> Body: <br>{
 
                         <br>"firstName": "Name",
@@ -46,7 +46,7 @@
 
             <li class="list-group-item"><h5> <b>PUT</b></h5>
                 Update a user.
-                <br> Example: http://localhost:8080/CrudApi/api/customers
+                <br> Example: http://localhost:8080/CrudApi/v1/customers
                 <br> Body: <br>{
 
                 <br>"firstName": "UpdatedName",
@@ -59,7 +59,7 @@
                 <br>
                 Number is replaced by the customer's id.
                 <br>
-                Example <a th:href="@{/api/customers/1}"></a>
+                Example <a th:href="@{/v1/customers/1}"></a>
             </li>
         </ul>
 </div>

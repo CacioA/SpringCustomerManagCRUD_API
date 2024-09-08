@@ -20,8 +20,6 @@ public class CustomerRestExceptionHandler {
         error.setTimeStamp(System.currentTimeMillis());
 
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-
-
     }
 
     // general exception handler

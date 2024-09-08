@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     // sort by last name
-    public List<Customer> findAllByOrderByLastNameAsc();
+    List<Customer> findAllByOrderByLastNameAsc();
 }

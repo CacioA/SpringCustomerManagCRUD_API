@@ -3,6 +3,7 @@ package com.example.SpringBootUserCrudApi.model;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name="customer")
 public class Customer {
@@ -21,11 +22,7 @@ public class Customer {
     @Column(name = "email")
     private String email;
 
-
-    public Customer() {
-
-
-    }
+    public Customer() {}
 
     public Customer(String firstName, String lastName, String email) {
         this.firstName = firstName;

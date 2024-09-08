@@ -18,23 +18,20 @@ public class managerController {
 
     private ManagerService managerService;
 
-    public managerController(ManagerService theManagerService) { managerService = theManagerService;}
+    public managerController(final ManagerService theManagerService) {
+        this.managerService = theManagerService;
+    }
 
     @GetMapping("/home")
-    public String managerHome(Model theModel){
+    public String managerHome(final Model theModel){
 
-        Manager manager = new Manager();
-        theModel.addAttribute("manager",manager);
-
+        theModel.addAttribute("manager",new Manager());
         return "logIn.html";
     }
 
     @GetMapping("/login")
     public String managerlogin(String email, String password){
-
         return managerService.getManager(email,password).getFirstName();
     }
-
-
 }
 
